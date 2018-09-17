@@ -33,6 +33,7 @@
 		F1615818214A6C65000B9700 /* Condition.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1615816214A6C65000B9700 /* Condition.swift */; };
 		F1615819214A6C65000B9700 /* Car.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1615817214A6C65000B9700 /* Car.swift */; };
 		F1FBA196214FFD2F00360FDA /* FileHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1FBA195214FFD2F00360FDA /* FileHandler.swift */; };
+		F1FF0A47214FFE8D00B7575B /* MKMapView+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1FF0A46214FFE8D00B7575B /* MKMapView+Additions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +81,7 @@
 		F1615816214A6C65000B9700 /* Condition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Condition.swift; sourceTree = "<group>"; };
 		F1615817214A6C65000B9700 /* Car.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Car.swift; sourceTree = "<group>"; };
 		F1FBA195214FFD2F00360FDA /* FileHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileHandler.swift; sourceTree = "<group>"; };
+		F1FF0A46214FFE8D00B7575B /* MKMapView+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MKMapView+Additions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +129,7 @@
 			children = (
 				F12EEC99214BCA7300CCCA38 /* UIFont+Additions.swift */,
 				F12EEC9B214BCAFC00CCCA38 /* UILabel+Additions.swift */,
+				F1FF0A46214FFE8D00B7575B /* MKMapView+Additions.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -425,6 +428,7 @@
 				F1615818214A6C65000B9700 /* Condition.swift in Sources */,
 				F1615819214A6C65000B9700 /* Car.swift in Sources */,
 				F12EECB3214FDEB200CCCA38 /* Parser.swift in Sources */,
+				F1FF0A47214FFE8D00B7575B /* MKMapView+Additions.swift in Sources */,
 				F12EECB4214FDEB200CCCA38 /* Api.swift in Sources */,
 				F12EECA7214FD03700CCCA38 /* CarViewModel.swift in Sources */,
 				F12EECAF214FDEB200CCCA38 /* Response.swift in Sources */,

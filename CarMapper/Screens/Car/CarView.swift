@@ -9,6 +9,7 @@ class CarView: UIView {
     
     private let tableView = UITableView()
     private let mapView = MKMapView()
+    private let locationManager = CLLocationManager()
     
     //MARK: Init Methods
     
@@ -50,6 +51,8 @@ class CarView: UIView {
             make.top.equalTo(mapView.snp.bottom)
             make.left.bottom.right.equalTo(self)
         }
+        
+        self.locationManager.requestWhenInUseAuthorization()
     }
 }
 
@@ -80,6 +83,7 @@ extension CarView {
     
     func addCarAnnotations(_ annotations: [CarAnnotation]) {
         self.mapView.addAnnotations(annotations)
+        self.mapView.fitAllAnnotations()
     }
     
     func removeCarAnnotations(_ annotations: [CarAnnotation]) {
