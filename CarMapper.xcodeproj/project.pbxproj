@@ -22,7 +22,6 @@
 		F12EECB2214FDEB200CCCA38 /* ApiError.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12EECAC214FDEB200CCCA38 /* ApiError.swift */; };
 		F12EECB3214FDEB200CCCA38 /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12EECAD214FDEB200CCCA38 /* Parser.swift */; };
 		F12EECB4214FDEB200CCCA38 /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12EECAE214FDEB200CCCA38 /* Api.swift */; };
-		F12EECBA214FDF1A00CCCA38 /* FileHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12EECB9214FDF1900CCCA38 /* FileHandler.swift */; };
 		F12EECBC214FDF3200CCCA38 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12EECBB214FDF3200CCCA38 /* Result.swift */; };
 		F12EECBF214FEE2400CCCA38 /* APIMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12EECBE214FEE2400CCCA38 /* APIMock.swift */; };
 		F12EECC2214FEF1700CCCA38 /* cars.json in Resources */ = {isa = PBXBuildFile; fileRef = F12EECC1214FEF1700CCCA38 /* cars.json */; };
@@ -33,6 +32,7 @@
 		F1615809214A6C1A000B9700 /* CarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1615808214A6C1A000B9700 /* CarViewController.swift */; };
 		F1615818214A6C65000B9700 /* Condition.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1615816214A6C65000B9700 /* Condition.swift */; };
 		F1615819214A6C65000B9700 /* Car.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1615817214A6C65000B9700 /* Car.swift */; };
+		F1FBA196214FFD2F00360FDA /* FileHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1FBA195214FFD2F00360FDA /* FileHandler.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,7 +65,6 @@
 		F12EECAC214FDEB200CCCA38 /* ApiError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiError.swift; sourceTree = "<group>"; };
 		F12EECAD214FDEB200CCCA38 /* Parser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
 		F12EECAE214FDEB200CCCA38 /* Api.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Api.swift; sourceTree = "<group>"; };
-		F12EECB9214FDF1900CCCA38 /* FileHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FileHandler.swift; path = ../../../../../Desktop/FileHandler.swift; sourceTree = "<group>"; };
 		F12EECBB214FDF3200CCCA38 /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		F12EECBE214FEE2400CCCA38 /* APIMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIMock.swift; sourceTree = "<group>"; };
 		F12EECC1214FEF1700CCCA38 /* cars.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = cars.json; sourceTree = "<group>"; };
@@ -80,6 +79,7 @@
 		F1615808214A6C1A000B9700 /* CarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarViewController.swift; sourceTree = "<group>"; };
 		F1615816214A6C65000B9700 /* Condition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Condition.swift; sourceTree = "<group>"; };
 		F1615817214A6C65000B9700 /* Car.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Car.swift; sourceTree = "<group>"; };
+		F1FBA195214FFD2F00360FDA /* FileHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileHandler.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,8 +128,7 @@
 				F12EEC99214BCA7300CCCA38 /* UIFont+Additions.swift */,
 				F12EEC9B214BCAFC00CCCA38 /* UILabel+Additions.swift */,
 			);
-			name = Helpers;
-			path = "New Group1";
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		F12EEC96214BC28800CCCA38 /* Car */ = {
@@ -150,7 +149,7 @@
 			children = (
 				F12EECAE214FDEB200CCCA38 /* Api.swift */,
 				F12EECAC214FDEB200CCCA38 /* ApiError.swift */,
-				F12EECB9214FDF1900CCCA38 /* FileHandler.swift */,
+				F1FBA195214FFD2F00360FDA /* FileHandler.swift */,
 				F12EECAD214FDEB200CCCA38 /* Parser.swift */,
 				F12EECAB214FDEB200CCCA38 /* Request.swift */,
 				F12EECAA214FDEB200CCCA38 /* Resource.swift */,
@@ -421,6 +420,7 @@
 			files = (
 				F12EECB0214FDEB200CCCA38 /* Resource.swift in Sources */,
 				F12EEC9A214BCA7300CCCA38 /* UIFont+Additions.swift in Sources */,
+				F1FBA196214FFD2F00360FDA /* FileHandler.swift in Sources */,
 				F12EECBC214FDF3200CCCA38 /* Result.swift in Sources */,
 				F1615818214A6C65000B9700 /* Condition.swift in Sources */,
 				F1615819214A6C65000B9700 /* Car.swift in Sources */,
@@ -432,7 +432,6 @@
 				F12EEC93214BAE5100CCCA38 /* CarView.swift in Sources */,
 				F12EECB2214FDEB200CCCA38 /* ApiError.swift in Sources */,
 				F12EECA3214E738400CCCA38 /* CarAnnotation.swift in Sources */,
-				F12EECBA214FDF1A00CCCA38 /* FileHandler.swift in Sources */,
 				F12EEC9C214BCAFC00CCCA38 /* UILabel+Additions.swift in Sources */,
 				F12EECA1214E718D00CCCA38 /* CarAnnotationView.swift in Sources */,
 				F12EECB1214FDEB200CCCA38 /* Request.swift in Sources */,
