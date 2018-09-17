@@ -83,11 +83,14 @@ extension CarView {
     
     func addCarAnnotations(_ annotations: [CarAnnotation]) {
         self.mapView.addAnnotations(annotations)
-        self.mapView.fitAllAnnotations()
     }
     
     func removeCarAnnotations(_ annotations: [CarAnnotation]) {
         self.mapView.removeAnnotations(annotations)
+    }
+    
+    func fitAllAnnotations() {
+        self.mapView.fitAllAnnotations()
     }
 }
 

@@ -13,6 +13,7 @@ class CarViewController: UIViewController {
                 DispatchQueue.main.async {
                     self?.carView.reload()
                     self?.carView.addCarAnnotations(vm.allAnnotations)
+                    self?.carView.fitAllAnnotations()
                 }
             }
             
