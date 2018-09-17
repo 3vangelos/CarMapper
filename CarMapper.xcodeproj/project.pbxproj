@@ -15,6 +15,15 @@
 		F12EEC9C214BCAFC00CCCA38 /* UILabel+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12EEC9B214BCAFC00CCCA38 /* UILabel+Additions.swift */; };
 		F12EECA1214E718D00CCCA38 /* CarAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12EECA0214E718D00CCCA38 /* CarAnnotationView.swift */; };
 		F12EECA3214E738400CCCA38 /* CarAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12EECA2214E738400CCCA38 /* CarAnnotation.swift */; };
+		F12EECA7214FD03700CCCA38 /* CarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12EECA6214FD03700CCCA38 /* CarViewModel.swift */; };
+		F12EECAF214FDEB200CCCA38 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12EECA9214FDEB200CCCA38 /* Response.swift */; };
+		F12EECB0214FDEB200CCCA38 /* Resource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12EECAA214FDEB200CCCA38 /* Resource.swift */; };
+		F12EECB1214FDEB200CCCA38 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12EECAB214FDEB200CCCA38 /* Request.swift */; };
+		F12EECB2214FDEB200CCCA38 /* ApiError.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12EECAC214FDEB200CCCA38 /* ApiError.swift */; };
+		F12EECB3214FDEB200CCCA38 /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12EECAD214FDEB200CCCA38 /* Parser.swift */; };
+		F12EECB4214FDEB200CCCA38 /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12EECAE214FDEB200CCCA38 /* Api.swift */; };
+		F12EECBA214FDF1A00CCCA38 /* FileHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12EECB9214FDF1900CCCA38 /* FileHandler.swift */; };
+		F12EECBC214FDF3200CCCA38 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12EECBB214FDF3200CCCA38 /* Result.swift */; };
 		F16157D0214A48AC000B9700 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16157CF214A48AC000B9700 /* AppDelegate.swift */; };
 		F16157D7214A48AD000B9700 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F16157D6214A48AD000B9700 /* Assets.xcassets */; };
 		F16157DA214A48AD000B9700 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F16157D8214A48AD000B9700 /* LaunchScreen.storyboard */; };
@@ -47,6 +56,15 @@
 		F12EEC9B214BCAFC00CCCA38 /* UILabel+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "UILabel+Additions.swift"; path = "CarMapper/Helpers/UILabel+Additions.swift"; sourceTree = SOURCE_ROOT; };
 		F12EECA0214E718D00CCCA38 /* CarAnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarAnnotationView.swift; sourceTree = "<group>"; };
 		F12EECA2214E738400CCCA38 /* CarAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarAnnotation.swift; sourceTree = "<group>"; };
+		F12EECA6214FD03700CCCA38 /* CarViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarViewModel.swift; sourceTree = "<group>"; };
+		F12EECA9214FDEB200CCCA38 /* Response.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
+		F12EECAA214FDEB200CCCA38 /* Resource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Resource.swift; sourceTree = "<group>"; };
+		F12EECAB214FDEB200CCCA38 /* Request.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
+		F12EECAC214FDEB200CCCA38 /* ApiError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiError.swift; sourceTree = "<group>"; };
+		F12EECAD214FDEB200CCCA38 /* Parser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
+		F12EECAE214FDEB200CCCA38 /* Api.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Api.swift; sourceTree = "<group>"; };
+		F12EECB9214FDF1900CCCA38 /* FileHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FileHandler.swift; path = ../../../../../Desktop/FileHandler.swift; sourceTree = "<group>"; };
+		F12EECBB214FDF3200CCCA38 /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		F16157CC214A48AC000B9700 /* CarMapper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CarMapper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F16157CF214A48AC000B9700 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F16157D6214A48AD000B9700 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -118,8 +136,23 @@
 				F12EEC97214BC2A700CCCA38 /* CarTableViewCell.swift */,
 				F12EEC92214BAE5100CCCA38 /* CarView.swift */,
 				F1615808214A6C1A000B9700 /* CarViewController.swift */,
+				F12EECA6214FD03700CCCA38 /* CarViewModel.swift */,
 			);
 			path = Car;
+			sourceTree = "<group>";
+		};
+		F12EECA8214FDEA400CCCA38 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				F12EECAE214FDEB200CCCA38 /* Api.swift */,
+				F12EECAC214FDEB200CCCA38 /* ApiError.swift */,
+				F12EECB9214FDF1900CCCA38 /* FileHandler.swift */,
+				F12EECAD214FDEB200CCCA38 /* Parser.swift */,
+				F12EECAB214FDEB200CCCA38 /* Request.swift */,
+				F12EECAA214FDEB200CCCA38 /* Resource.swift */,
+				F12EECA9214FDEB200CCCA38 /* Response.swift */,
+			);
+			path = Networking;
 			sourceTree = "<group>";
 		};
 		F16157C3214A48AC000B9700 = {
@@ -145,6 +178,7 @@
 		F16157CE214A48AC000B9700 /* CarMapper */ = {
 			isa = PBXGroup;
 			children = (
+				F12EECA8214FDEA400CCCA38 /* Networking */,
 				F1615805214A63E9000B9700 /* App */,
 				F12EEC8D214AA70400CCCA38 /* Helpers */,
 				F1615815214A6C50000B9700 /* Models */,
@@ -186,6 +220,7 @@
 			children = (
 				F1615817214A6C65000B9700 /* Car.swift */,
 				F1615816214A6C65000B9700 /* Condition.swift */,
+				F12EECBB214FDF3200CCCA38 /* Result.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -361,14 +396,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F12EECB0214FDEB200CCCA38 /* Resource.swift in Sources */,
 				F12EEC9A214BCA7300CCCA38 /* UIFont+Additions.swift in Sources */,
+				F12EECBC214FDF3200CCCA38 /* Result.swift in Sources */,
 				F1615818214A6C65000B9700 /* Condition.swift in Sources */,
 				F1615819214A6C65000B9700 /* Car.swift in Sources */,
+				F12EECB3214FDEB200CCCA38 /* Parser.swift in Sources */,
+				F12EECB4214FDEB200CCCA38 /* Api.swift in Sources */,
+				F12EECA7214FD03700CCCA38 /* CarViewModel.swift in Sources */,
+				F12EECAF214FDEB200CCCA38 /* Response.swift in Sources */,
 				F16157D0214A48AC000B9700 /* AppDelegate.swift in Sources */,
 				F12EEC93214BAE5100CCCA38 /* CarView.swift in Sources */,
+				F12EECB2214FDEB200CCCA38 /* ApiError.swift in Sources */,
 				F12EECA3214E738400CCCA38 /* CarAnnotation.swift in Sources */,
+				F12EECBA214FDF1A00CCCA38 /* FileHandler.swift in Sources */,
 				F12EEC9C214BCAFC00CCCA38 /* UILabel+Additions.swift in Sources */,
 				F12EECA1214E718D00CCCA38 /* CarAnnotationView.swift in Sources */,
+				F12EECB1214FDEB200CCCA38 /* Request.swift in Sources */,
 				F1615809214A6C1A000B9700 /* CarViewController.swift in Sources */,
 				F12EEC98214BC2A700CCCA38 /* CarTableViewCell.swift in Sources */,
 			);

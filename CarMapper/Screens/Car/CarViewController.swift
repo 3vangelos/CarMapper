@@ -3,31 +3,28 @@ import SnapKit
 import UIKit
 
 class CarViewController: UIViewController {
+
+    //MARK: Variables
     
-    //TODO: Remove Dummy Data, bind to real Data
-    private lazy var cars = [Car(vin: "TEST1",
-                            name: "This is the Test Car Nr. 1",
-                            address: "Friedrichstraße 45, 10117 Berlin",
-                            fuel: 83,
-                            coordinates: [52.11, 13.0, 0],
-                            engineType: "CE",
-                            interior: .unacceptable,
-                            exterior: .good),
-                        Car(vin: "TEST2",
-                            name: "This is the Test Car Nr. 2",
-                            address: "Friedrichstraße 43, 10117 Berlin",
-                            fuel: 23,
-                            coordinates: [52.1, 13.0, 0],
-                            engineType: "CE",
-                            interior: .good,
-                            exterior: .unacceptable)]
-    
-    private lazy var allAnnotations = [CarAnnotation(vin: cars.first!.vin!,
-                                                title: cars.first!.name,
-                                                coordinate: cars.first!.coordinate()!),
-                                  CarAnnotation(vin: cars.last!.vin!,
-                                                title: cars.last!.name,
-                                                coordinate: cars.last!.coordinate()!)]
+    var vm: CarViewModel? {
+        didSet {
+            guard let vm = vm else { return }
+            vm.reloadViewClosure = { [weak self] () in
+                DispatchQueue.main.async {
+                    self?.carView.reload()
+                    self?.carView.addCarAnnotations(vm.allAnnotations)
+                }
+            }
+            
+            vm.showAlertClosure = { [weak self] () in
+                DispatchQueue.main.async {
+                    if let message = self?.vm?.alertMessage {
+                        self?.showAlert( message )
+                    }
+                }
+            }
+        }
+    }
     
     //MARK: Private Variables
     
@@ -53,21 +50,21 @@ class CarViewController: UIViewController {
         self.view = carView
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        self.carView.mapView.addAnnotations(allAnnotations)
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.vm?.fetchData()
     }
 }
 
 extension CarViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.cars.count
+        return self.vm?.numberOfCells ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = self.carView.dequeCellForIndexPath(indexPath)
-        let car = self.cars[indexPath.row]
+        guard let car = self.vm?.cars[indexPath.row] else { return cell }
+        
         cell.name = car.name
         cell.address = car.address
         cell.fuel = car.fuel
@@ -85,13 +82,6 @@ extension CarViewController: MKMapViewDelegate {
         }
         return view
     }
-    
-    @objc func didTapAnnotationView(_ sender: UITapGestureRecognizer) {
-        guard let view = sender.view as? CarAnnotationView else { return }
-        view.isSelected = !view.isSelected
-        didTapOnCarAnnotationView(view)
-
-    }
 
     func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
         guard let view = view as? CarAnnotationView else { return }
@@ -104,12 +94,32 @@ extension CarViewController: MKMapViewDelegate {
         view.isSelected = false
         didTapOnCarAnnotationView(view)
     }
+}
+
+extension CarViewController {
+    @objc
+    private func didTapAnnotationView(_ sender: UITapGestureRecognizer) {
+        guard let view = sender.view as? CarAnnotationView else { return }
+        view.isSelected = !view.isSelected
+        didTapOnCarAnnotationView(view)
+    }
     
-    func didTapOnCarAnnotationView(_ view: CarAnnotationView) {
-        if view.isSelected {
-            self.carView.removeCarAnnotations(allAnnotations.filter({ $0.title != view.titleLabel.text }))
-        } else {
-            self.carView.addCarAnnotations(allAnnotations.filter({ $0.title != view.titleLabel.text }))
+    private func didTapOnCarAnnotationView(_ view: CarAnnotationView) {
+        guard let name = view.titleLabel.text,
+            let annotations = self.vm?.annotationsWithoutName(name) else {
+                return
         }
+        
+        if view.isSelected {
+            self.carView.removeCarAnnotations(annotations)
+        } else {
+            self.carView.addCarAnnotations(annotations)
+        }
+    }
+    
+    private func showAlert( _ message: String ) {
+        let alert = UIAlertController(title: "Alert", message: message, preferredStyle: .alert)
+        alert.addAction( UIAlertAction(title: "Ok", style: .cancel, handler: nil))
+        self.present(alert, animated: true, completion: nil)
     }
 }

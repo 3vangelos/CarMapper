@@ -12,6 +12,6 @@ struct Car: Codable {
     
     func coordinate() -> CLLocationCoordinate2D? {
         guard let c = self.coordinates, c.count > 1 else { return nil }
-        return CLLocationCoordinate2D(latitude: c[0], longitude: c[1])
+        return CLLocationCoordinate2D(latitude: c[1], longitude: c[0])
     }
 }

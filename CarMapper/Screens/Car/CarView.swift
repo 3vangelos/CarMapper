@@ -8,7 +8,7 @@ class CarView: UIView {
     private let carCellReuseIdentifier = "carCellReuseIdentifier"
     
     private let tableView = UITableView()
-    let mapView = MKMapView()
+    private let mapView = MKMapView()
     
     //MARK: Init Methods
     
@@ -56,6 +56,10 @@ class CarView: UIView {
 //MARK: Internal Methods
 
 extension CarView {
+    func reload() {
+        self.tableView.reloadData()
+    }
+    
     func dequeCellForIndexPath(_ indexPath: IndexPath) -> CarTableViewCell {
         return tableView.dequeueReusableCell(withIdentifier: carCellReuseIdentifier,
                                              for: indexPath) as! CarTableViewCell

@@ -131,9 +131,7 @@ class CarTableViewCell: UITableViewCell {
         addressLabel.text = nil
         fuelLabel.text = nil
         fuelView.isHidden = true
-        interiorLabel.text = nil
         interiorIconLabel.text = "🤷🏻"
-        exteriorLabel.text = nil
         exteriorIconLabel.text = "🤷🏾‍♂️"
     }
 }
